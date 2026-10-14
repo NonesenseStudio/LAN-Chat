@@ -1,0 +1,20 @@
+/*
+ * 聊天产品专用语义变量（docs/implementation-plan.md 4.1 节）。
+ * 组件样式优先使用 Nuxt UI 语义类与 --ui-* 变量；这里只补充消息气泡等自定义样式，
+ * 浅深主题各自明确映射，不在业务组件里写死颜色。
+ */
+
+:root {
+  /* 自己的消息气泡底色（发送中降透明度使用） */
+  --chat-message-own-bg: var(--ui-primary);
+  --chat-message-own-bg-alpha: 1;
+  /* 时间分隔与状态行 */
+  --chat-divider-text: var(--ui-text-dimmed);
+  /* 附件卡片边框 */
+  --chat-file-border: var(--ui-border);
+  --chat-file-bg: var(--ui-bg-elevated);
+}
+
+.dark {
+  --chat-message-own-bg-alpha: 0.92;
+}
